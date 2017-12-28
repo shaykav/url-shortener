@@ -1,0 +1,14 @@
+<h1 class="title">Wyncode ShortURLS</h1>
+
+<% @url_shorteners.each do |us| %>
+  <div class="">
+    <label for="">Original Url</label>-<p><%= us.long_url %></p>
+
+    <label for="">Short Url</label>-
+    <!-- <a href="<%= url_shortener_url(us) %>"><%= us.short_url %></a> -->
+    <%= link_to us.short_url, us %>
+  </div>
+  <hr>
+<% end %>
+
+<%= link_to "New Shortener", new_url_shortener_path, class: "btn btn-primary" %>

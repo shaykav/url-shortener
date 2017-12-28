@@ -1,0 +1,8 @@
+<%= form_for @url_shortener do |f| %>
+  <div class="submit-center">
+    <%= f.label(:long_url) %>
+    <%= f.text_field :long_url %>
+
+    <%= f.submit "Create", class: "btn btn-primary" %>
+  </div>
+<% end %>
